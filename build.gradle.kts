@@ -11,6 +11,14 @@ repositories {
 
 dependencies {
     api(kotlin("stdlib"))
+
+    api("io.ktor:ktor-client-core:1.6.5")
+    api("io.ktor:ktor-client-cio:1.6.5")
+
+    api("dev.siro256:kotlin-consolelib:1.0.0")
+    api("dev.siro256:kotlin-eventlib:1.0.0")
+
+    api("org.yaml:snakeyaml:1.29")
 }
 
 tasks {
