@@ -1,4 +1,4 @@
-package dev.siro256.serverchecker
+package dev.siro256.serverchecker._enum
 
 enum class MonitorMethod {
     HTTP,

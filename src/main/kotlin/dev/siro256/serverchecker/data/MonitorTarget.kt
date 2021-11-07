@@ -1,6 +1,6 @@
 package dev.siro256.serverchecker.data
 
-import dev.siro256.serverchecker.MonitorMethod
+import dev.siro256.serverchecker._enum.MonitorMethod
 
 data class MonitorTarget(
     val name: String,

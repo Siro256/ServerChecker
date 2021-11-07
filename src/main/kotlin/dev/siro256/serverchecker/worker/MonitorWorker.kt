@@ -1,6 +1,6 @@
 package dev.siro256.serverchecker.worker
 
-import dev.siro256.serverchecker.MonitorMethod
+import dev.siro256.serverchecker._enum.MonitorMethod
 import dev.siro256.serverchecker.data.MonitorTarget
 
 abstract class MonitorWorker {

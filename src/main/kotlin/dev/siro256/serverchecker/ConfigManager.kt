@@ -1,6 +1,7 @@
 package dev.siro256.serverchecker
 
 import dev.siro256.kotlin.consolelib.Console
+import dev.siro256.serverchecker._enum.MonitorMethod
 import dev.siro256.serverchecker.data.MonitorTarget
 import org.yaml.snakeyaml.Yaml
 import java.nio.file.Files
