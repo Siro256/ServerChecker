@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     kotlin("jvm") version "1.5.31"
 }
@@ -22,6 +24,11 @@ dependencies {
 }
 
 tasks {
+    withType<KotlinCompile>.configureEach {
+        //Strict
+        kotlinOptions.allWarningsAsErrors = true
+    }
+
     withType<ProcessResources> {
         filteringCharset = "UTF-8"
         from(projectDir) {
