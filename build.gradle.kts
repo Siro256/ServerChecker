@@ -12,14 +12,18 @@ repositories {
 }
 
 dependencies {
+    //Kotlin
     api(kotlin("stdlib"))
 
+    //Ktor
     api("io.ktor:ktor-client-core:1.6.5")
     api("io.ktor:ktor-client-cio:1.6.5")
 
+    //Console library
     api("dev.siro256:kotlin-consolelib:1.0.0")
     api("dev.siro256:kotlin-eventlib:1.0.0")
 
+    //other
     api("org.yaml:snakeyaml:1.29")
 }
 
