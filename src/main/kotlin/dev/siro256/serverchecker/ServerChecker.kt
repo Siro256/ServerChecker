@@ -25,5 +25,9 @@ object ServerChecker {
         listOf(
             HttpWorker
         ).forEach { monitorWorker.add(it) }
+
+        while (true) {
+            Thread.sleep(1000)
+        }
     }
 }
