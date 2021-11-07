@@ -1,0 +1,86 @@
+# Config version
+#
+# If config.yml exists and configVersion different from current version,
+# that file is rename to config.yml.old and create config.yml.new.
+# current version is 1.
+#
+# Example:
+# configVersion: 1
+configVersion: 1
+
+# Webhook URL
+#
+# Currently, only support discord.
+#
+# Example:
+# webhookUrl: "https://ptb.discord.com/api/webhooks/906635326229995610/KSZ2Ld8Dme7cDG2aZeYeSjbq2BuX70RHZ1Vx-3wwMFJatiEN5yxJbFix5YswTKyDi3tS"
+webhookUrl: ""
+
+# Self-monitor server
+#
+# If you want to monitor this tool, useServer set true.
+#
+# Example:
+# useServer: true
+# bindAddress: 0.0.0.0
+# bindPort: 6712
+useServer: true
+bindAddress: "0.0.0.0"
+bindPort: 6712
+
+# Monitor settings
+#
+# timeout - Max wait time in a one trial.(Unit: ms)
+# maxRetry - Max count of retries
+#
+# Example:
+# timeout: 2000
+# maxRetry: 3
+timeout: 2000
+maxRetly: 3
+
+# Monitor target
+#
+# format:
+# monitorTarget:
+#     - name: NAME
+#       description: DESCRIPTION
+#       method: MONITOR_METHOD
+#       destination: DESTINATION
+#       period: PERIOD
+#
+# name: Name to identify the target.
+#
+# description: Target's description(Optional).
+#
+#
+# method: Monitor method.
+#         Provided methods:
+#           - HTTP: destination format is "http://host[:port] or https://host[:port]".
+#                   Checking the http connectivity with HTTP GET method.
+#                   If the target returns http status other than 200 or not responding,
+#                   ServerChecker will be posts a down alert.
+#
+#           - PING: destination format is "host".
+#                   Checking the ping response.
+#                   If the target is unreachable or not responding,
+#                   ServerChecker will be posts a down alert.
+#
+#           - SERVER_CHECKER: destination format is "host[:port]".
+#                   Checking another ServerChecker response.
+#                   If the target is not responding,
+#                   ServerChecker will be posts a down alert.
+#
+#         destination: Destination to monitor.
+#              Depends on the method, please see above.
+#
+#         period: Monitor period(Unit: second).
+#
+# Example:
+# monitorTarget:
+#     - name: "Target1"
+#       description: "On-premise server 1"
+#       method: "HTTP"
+#       destination: "https://example.com/"
+#       period: 60
+monitorTarget:
