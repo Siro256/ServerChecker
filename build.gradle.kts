@@ -24,7 +24,7 @@ dependencies {
 }
 
 tasks {
-    withType<KotlinCompile>.configureEach {
+    withType<KotlinCompile> {
         //Strict
         kotlinOptions.allWarningsAsErrors = true
     }
