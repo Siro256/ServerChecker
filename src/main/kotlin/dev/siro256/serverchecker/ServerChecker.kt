@@ -9,5 +9,9 @@ object ServerChecker {
     fun main(args: Array<String>) {
         //Initialize console class
         Console.initialize()
+
+        //Initialize config
+        ConfigManager.deployFile()
+        ConfigManager.loadConfig()
     }
 }
