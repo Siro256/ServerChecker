@@ -24,7 +24,9 @@ dependencies {
 tasks {
     withType<ProcessResources> {
         filteringCharset = "UTF-8"
-        from(projectDir).include("LICENSE")
+        from(projectDir) {
+            include("LICENSE")
+        }
     }
 
     withType<Jar> {
