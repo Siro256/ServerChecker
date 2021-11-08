@@ -28,7 +28,7 @@ object HttpWorker: MonitorWorker() {
     }
 
     override fun checkTarget(target: MonitorTarget): Boolean  {
-        if (target.method != MonitorMethod.HTTP) throw IllegalArgumentException("Target method must be HTTP.")
+        if (target.method != method) throw IllegalArgumentException("Target method must be HTTP.")
 
         return runBlocking {
             if ((client.get(target.destination) as HttpResponse).status != HttpStatusCode.OK)
