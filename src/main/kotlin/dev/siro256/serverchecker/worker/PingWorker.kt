@@ -9,7 +9,7 @@ object PingWorker: MonitorWorker() {
     override val method = MonitorMethod.PING
 
     override fun checkTarget(target: MonitorTarget): Boolean {
-        if (target.method != method) throw IllegalArgumentException("Target method must be PING.")
+        if (target.method != PingWorker.method) throw IllegalArgumentException("Target method must be ${ServerCheckerWorker.method.name}.")
 
         return InetAddress.getByName(target.destination).isReachable(ConfigManager.timeout)
     }
