@@ -7,6 +7,7 @@ import dev.siro256.serverchecker.data.DownAlertData
 import dev.siro256.serverchecker.data.UpAlertData
 import dev.siro256.serverchecker.worker.HttpWorker
 import dev.siro256.serverchecker.worker.MonitorWorker
+import dev.siro256.serverchecker.worker.PingWorker
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
@@ -32,7 +33,8 @@ object ServerChecker {
 
         //Register worker to list
         listOf(
-            HttpWorker
+            HttpWorker,
+            PingWorker
         ).forEach { monitorWorker.add(it) }
 
         //Register task
